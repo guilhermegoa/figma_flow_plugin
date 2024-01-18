@@ -1,0 +1,38 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+devDependencies:
+  '@figma/plugin-typings':
+    specifier: '*'
+    version: 1.84.0
+  '@types/node':
+    specifier: ^20.11.5
+    version: 20.11.5
+  typescript:
+    specifier: '*'
+    version: 5.3.3
+
+packages:
+
+  /@figma/plugin-typings@1.84.0:
+    resolution: {integrity: sha512-YisOp7S2y10BWMLBJY2DazCjRpg/0m03dDlS3nKhpw2alFQSXNuSLLd+y4pbnJpOXJMnInZdbikr/7JxudjsYg==}
+    dev: true
+
+  /@types/node@20.11.5:
+    resolution: {integrity: sha512-g557vgQjUUfN76MZAN/dt1z3dzcUsimuysco0KeluHgrPdJXkP/XdAURgyO2W9fZWHRtRBiVKzKn8vyOAwlG+w==}
+    dependencies:
+      undici-types: 5.26.5
+    dev: true
+
+  /typescript@5.3.3:
+    resolution: {integrity: sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+    dev: true
+
+  /undici-types@5.26.5:
+    resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
+    dev: true
