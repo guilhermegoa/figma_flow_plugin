@@ -349,40 +349,40 @@ const json = [
 
 figma.ui.onmessage = async msg => {
   if (msg.type === 'create-rectangles') {
-    await figma.loadFontAsync({ family: "Inter", style: "Regular" });
+    // await figma.loadFontAsync({ family: "Inter", style: "Regular" });
 
-    console.log('passou')
+    // console.log('passou')
 
-    const nodes: SceneNode[] = []
+    // const nodes: SceneNode[] = []
 
-    json.forEach((block: any) => {
+    // json.forEach((block: any) => {
 
-      console.log('chegou aqui')
+    //   console.log('chegou aqui')
 
-      const rect = figma.createRectangle()
-      // rect.x = Number(block.position.left.replace('px', ''))
-      // rect.y = Number(block.position.top.replace('px', ''))
-      rect.fills = [{ type: 'SOLID', color: { r: 1, g: 1, b: 1 } }]
+    //   const rect = figma.createRectangle()
+    //   // rect.x = Number(block.position.left.replace('px', ''))
+    //   // rect.y = Number(block.position.top.replace('px', ''))
+    //   rect.fills = [{ type: 'SOLID', color: { r: 1, g: 1, b: 1 } }]
 
-      console.log('texto aqui')
-      const text = figma.createText()
-      // text.characters = block.nome
-      // text.x = rect.x + 10
-      // text.y = rect.y + 10
+    //   console.log('texto aqui')
+    //   const text = figma.createText()
+    //   // text.characters = block.nome
+    //   // text.x = rect.x + 10
+    //   // text.y = rect.y + 10
 
-      console.log('frame aqui')
-      const frame = figma.createFrame()
-      frame.resize(100 * 1.5, 100 * 1.5)
-      frame.x = Number(block.position.left.replace('px', ''))
-      frame.y = Number(block.position.top.replace('px', ''))
-      frame.name = block.nome
+    //   console.log('frame aqui')
+    //   const frame = figma.createFrame()
+    //   frame.resize(100 * 1.5, 100 * 1.5)
+    //   frame.x = Number(block.position.left.replace('px', ''))
+    //   frame.y = Number(block.position.top.replace('px', ''))
+    //   frame.name = block.nome
 
-      frame.appendChild(rect)
-      frame.appendChild(text)
+    //   frame.appendChild(rect)
+    //   frame.appendChild(text)
 
-      figma.currentPage.appendChild(frame)
-      nodes.push(frame)
-    })
+    //   figma.currentPage.appendChild(frame)
+    //   nodes.push(frame)
+    // })
 
     // const line = figma.createLine()
     // line.strokes = [{ type: 'SOLID', color: { r: 1, g: 1, b: 0 } }]
@@ -393,9 +393,49 @@ figma.ui.onmessage = async msg => {
     // line.y = nodes[0].height / 2
 
     // const group = figma.group([...nodes, line], figma.currentPage)
-    figma.currentPage.selection = nodes
-    figma.viewport.scrollAndZoomIntoView(nodes)
+
+    const component = await figma.importComponentByKeyAsync("169bb704de7292a63908de75d8619c6004870dea")
+
+    const instance = component.createInstance()
+
+    console.log(component.children)
+
+    figma.currentPage.appendChild(instance)
+
+    // figma.currentPage.selection = nodes
+    // figma.viewport.scrollAndZoomIntoView(nodes)
 
     figma.closePlugin()
   }
 }
+
+// await figma.importComponentByKeyAsync("73cfe38d8bd4b8fac5583f3ca43d533591229493")
+// await figma.importComponentByKeyAsync("0620dc248941302d1f004652b3d111e755e4cd8b")
+// await figma.importComponentByKeyAsync("03afe7edee9b9cb10a2126deff7d3ebfdb2cffe1")
+// await figma.importComponentByKeyAsync("05cffdade75bc3ca8e47758bda37b671a8073eb5")
+// await figma.importComponentByKeyAsync("6673fda3cae072caa327aba6ed56274c4b06d4f2")
+// await figma.importComponentByKeyAsync("a21253cabb4d2bd123475de2ed08c2f0bb3058ff")
+// await figma.importComponentByKeyAsync("3c5b1beaef624b8c28ffa9de75461407702de61f")
+// await figma.importComponentByKeyAsync("0b80afb8997ad3456ebc880d63bf8f4fd973bb5b")
+// await figma.importComponentByKeyAsync("e7f72b691c2330f3e805a8cbe8841428a042a672")
+// await figma.importComponentByKeyAsync("8f45c5ac18631c349f4a19ef153c3f699494c083")
+// await figma.importComponentByKeyAsync("aa71730f474ef860ca81da3cac59c864e20ea104")
+// await figma.importComponentByKeyAsync("b5b88918ceb07cf32e5b1431c04825863f64bdd0")
+// await figma.importComponentByKeyAsync("fa054bcf87edea736607f25792b5196c4133e28d")
+// await figma.importComponentByKeyAsync("6bd3ec2b21540f8cd03ec28eb30f40a2c5c8fda6")
+// await figma.importComponentByKeyAsync("aea56c4ffca45d4cf4ea5d62d28bb9b304a5171d")
+// await figma.importComponentByKeyAsync("6762d6bc0bc6defae6bfb28d4cf3f4e5017d99ee")
+// await figma.importComponentByKeyAsync("aed1ac06ce1e56805ec1675ee715582a09cc8143")
+// await figma.importComponentByKeyAsync("6bae0f78fbdea3d2d3a4c5c501db83c581b76ec4")
+// await figma.importComponentByKeyAsync("d13e2d3df8f32288703ff7bbf14b84b4050f0555")
+// await figma.importComponentByKeyAsync("649305ae954563c557be5424e85d7f66ff75eb43")
+// await figma.importComponentByKeyAsync("4165197120546034430934bb0c367932d747ea28")
+// await figma.importComponentByKeyAsync("38a80132b23e2c09bfdaba75f9e837e2a3d73642")
+// await figma.importComponentByKeyAsync("6abb4b77f96b7fe0164b38fde08f19429887b28d")
+// await figma.importComponentByKeyAsync("41426e4fe1e09129eea7b328f767de8afea2b80e")
+// await figma.importComponentByKeyAsync("dfa5b22a8c671446acb89082f4974261d1374670")
+// await figma.importComponentByKeyAsync("6a5c74c9014ee717cb32439bb3d6f361abf6829b")
+// await figma.importComponentByKeyAsync("169bb704de7292a63908de75d8619c6004870dea")
+// await figma.importComponentByKeyAsync("64e27e323f13fb961632b098405bee00c7185fdc")
+// await figma.importComponentByKeyAsync("b5d9b44a0b5892ab173a093efa09c7b198e777f1")
+// await figma.importComponentByKeyAsync("a2950c849d7b308fd853501b7bf6e6acaabe2e80")
