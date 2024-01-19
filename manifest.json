@@ -2,13 +2,13 @@
   "name": "testeFlowBlip",
   "id": "1329817700839958377",
   "api": "1.0.0",
-  "main": "code.js",
+  "main": "src/code.js",
   "capabilities": [],
   "enableProposedApi": false,
   "editorType": [
     "figma"
   ],
-  "ui": "ui.html",
+  "ui": "src/ui.html",
   "networkAccess": {
     "allowedDomains": [
       "none"
