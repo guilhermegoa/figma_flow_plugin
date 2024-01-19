@@ -2,7 +2,7 @@
   "name": "testeFlowBlip",
   "id": "1329817700839958377",
   "api": "1.0.0",
-  "main": "src/code.js",
+  "main": "dist/code.js",
   "capabilities": [],
   "enableProposedApi": false,
   "editorType": [

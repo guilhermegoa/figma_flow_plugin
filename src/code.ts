@@ -348,7 +348,7 @@ const json = [
 ]
 
 figma.ui.onmessage = async msg => {
-  if (msg.type === 'create-rectangles') {
+  if (msg.type === 'create-figma-flow') {
     // await figma.loadFontAsync({ family: "Inter", style: "Regular" });
 
     // console.log('passou')

@@ -1,17 +1,12 @@
-<h2>Rectangle Creator</h2>
-<p>Count: <input id="count" value="5"></p>
-<button id="create">Create</button>
-<button id="cancel">Cancel</button>
+<h2>Builder to Figma</h2>
+<p>Skill Authorization Key: <input id="key" placeholder="key 123asad123ashjaslhdhlkgh"></p>
+<button id="create">Create figma flow</button>
 <script>
 
   document.getElementById('create').onclick = () => {
-    const textbox = document.getElementById('count');
-    const count = parseInt(textbox.value, 10);
-    parent.postMessage({ pluginMessage: { type: 'create-rectangles', count } }, '*')
-  }
-
-  document.getElementById('cancel').onclick = () => {
-    parent.postMessage({ pluginMessage: { type: 'cancel' } }, '*')
+    const textbox = document.getElementById('key');
+    const key = textbox.value
+    parent.postMessage({ pluginMessage: { type: 'create-figma-flow', key } }, '*')
   }
 
 </script>
