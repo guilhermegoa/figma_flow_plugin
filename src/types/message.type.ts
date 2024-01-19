@@ -1,8 +1,7 @@
-type message = [
-  {
+type MessageType =
+  Array<{
     type: string
     key: string
-  }
-]
+  }>
 
-export default message
+export default MessageType

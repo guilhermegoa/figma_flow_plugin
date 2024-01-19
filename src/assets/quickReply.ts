@@ -1,3 +1,5 @@
+import type QuickReplyType from '../types/quickReply.type'
+
 export default [
   {
     key: '73cfe38d8bd4b8fac5583f3ca43d533591229493',
@@ -209,4 +211,4 @@ export default [
     footer: true,
     buttons: ' 3'
   }
-]
+] as QuickReplyType

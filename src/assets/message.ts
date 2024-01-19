@@ -1,3 +1,5 @@
+import type MessageType from '../types/message.type'
+
 export default [
   {
     type: 'sender',
@@ -7,4 +9,4 @@ export default [
     type: 'receiver',
     key: 'f2df45daaa834371cfc8d307d0a971811e467857'
   }
-]
+] as MessageType
