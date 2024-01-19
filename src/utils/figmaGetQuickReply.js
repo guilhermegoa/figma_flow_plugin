@@ -7,15 +7,16 @@ function getQuickReply() {
     const processedDatas = datas.map(d => {
         const [header, footer, buttons] = d.name.replace(/((header)?(footer)?(#\s*buttons)?)?\s*(\(optional\))?=/gmi, '').split(',')
 
+        // console.log(footer)
+
         return {
             key: d.key,
             name: d.name,
             header: header === 'None' ? null : header,
-            footer: footer === 'True',
+            footer: footer.trim() == 'True',
             buttons: buttons
         }
     })
 
     console.log(processedDatas)
-
 }
