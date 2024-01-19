@@ -4,6 +4,7 @@
   "description": "Your Figma Plugin",
   "main": "code.js",
   "postinstall": "husky install",
+  "prepare": "husky install && chmod ug+x .husky/*",
   "scripts": {
     "lint": "npx eslint --fix src/**/*.ts",
     "build": "tsc -p tsconfig.json",
