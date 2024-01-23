@@ -28,7 +28,7 @@ interface Action {
   }
 }
 
-export function getTransitFlows ({ flow }: any): BlockList[] {
+export function jsonReader ({ flow }: any): BlockList[] {
   // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
   const keys = Object.keys(flow)
   const listBlocos = [] as BlockList[]
