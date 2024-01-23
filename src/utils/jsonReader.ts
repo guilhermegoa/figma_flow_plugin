@@ -1,4 +1,4 @@
-interface BlockList {
+export interface BlockList {
   id: string
   nome: string
   destination: string

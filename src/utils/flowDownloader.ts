@@ -1,4 +1,4 @@
-import { jsonReader } from './jsonReader'
+import { type BlockList, jsonReader } from './jsonReader'
 
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 async function getDeployHistory (key: string) {
@@ -27,7 +27,7 @@ async function getDeployHistory (key: string) {
   return `/buckets/blip_portal:builder_latestpublications:${arrayDeploys[0].index}`
 }
 
-export async function getBotJson (key: string) {
+export async function getBotJson (key: string): Promise<BlockList[]> {
   const latestPublication = await getDeployHistory(key)
   const myHeaders = new Headers()
   myHeaders.append('Authorization', key)
